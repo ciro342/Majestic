@@ -2,29 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Club Deportivo Azul</title>
+    <title>Club Deportivo Majestic</title>
+    <link rel="icon" type="image/png" href="./assets/log2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header id="header">
         <nav>
-            <div class="logo"> Club Majestic</div>
-
-              <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
+            <div class="logo">Club Majestic</div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="#galeria">Galería</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
                 <li><a href="#info">Información</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -42,122 +39,125 @@
         </div>
         <div class="hero-wrapper">
             <div class="hero-content">
-                <h1>Bienvenido al Club Majestick</h1>
-                <p>Pasión, Disciplina y Excelencia en el Fútbol</p>
+                <h1>Bienvenido al Club Majestic</h1>
+                <p>Fútbol y Amigos</p>
                 <a href="#sobre-nosotros" class="cta-button">Conoce Más</a>
             </div>
             <div class="hero-image">
                 <div class="log2">
-                    <img src="/assets/log2.png" alt="">
+                    <img src="/assets/log2.png" alt="Club Majestic Logo" onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Gallery Section -->
-    <section class="image-section" id="galeria">
-        <h2 class="section-title reveal">Nuestra Galería</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 2rem;" class="reveal">Momentos que definen nuestra historia</p>
-        <div class="image-grid">
-            <div class="image-card reveal">
-                <div class="image-placeholder">⚽</div>
-                <div class="image-card-content">
-                    <h3>Entrenamiento</h3>
-                    <p>Preparación física y técnica de primer nivel</p>
-                </div>
-            </div>
-            <div class="image-card reveal">
-                <div class="image-placeholder">🏆</div>
-                <div class="image-card-content">
-                    <h3>Campeonatos</h3>
-                    <p>Nuestra historia de éxitos y victorias</p>
-                </div>
-            </div>
-            <div class="image-card reveal">
-                <div class="image-placeholder">👥</div>
-                <div class="image-card-content">
-                    <h3>Equipo</h3>
-                    <p>Los mejores jugadores comprometidos con la excelencia</p>
-                </div>
-            </div>
+<section class="gallery-section" id="galeria">
+    <h2 class="section-title reveal">Nuestra Galería</h2>
+    <div class="gallery-grid">
+        <div class="gallery-card reveal">
+            <img src="./assets/F1.jpg" alt="Imagen 1">
         </div>
-    </section>
-
+        <div class="gallery-card reveal">
+            <img src="./assets/f.jpg" alt="Imagen 2">
+        </div>
+        <div class="gallery-card reveal">
+            <img src="./assets/f3.jpg" alt="Imagen 3">
+        </div>
+        <div class="gallery-card reveal">
+            <img src="./assets/F2.jpg" alt="Imagen 4">
+        </div>
+        <div class="gallery-card reveal">
+            <img src="./assets/f4.jpg" alt="Imagen 5">
+        </div>
+    </div>
+    <a href="galeria-completa.html" class="about-link">Ver galería completa →</a>
+</section>
     <!-- About Section -->
-    <section class="about" id="sobre-nosotros">
+    <section class="about-section" id="sobre-nosotros">
         <div class="about-container">
-            <div class="about-image reveal-left">🛡️</div>
-            <div class="about-content reveal-right">
+            <div class="about-icon"><img src="./assets/log2.png" alt=""></div>
+            <div class="about-content reveal">
                 <h2>Sobre Nosotros</h2>
                 <p>Somos un club deportivo con más de 5 años de historia, dedicados a formar no solo grandes futbolistas, sino también personas íntegras y comprometidas con los valores del deporte.</p>
-                <p>Nuestra misión es proporcionar la mejor preparación técnica, física y mental a nuestros jugadores, creando un ambiente de respeto, disciplina y trabajo en equipo.</p>
-                <a href="sobre-nosotros.html" class="about-link">Ver Más Información →</a>
+                <p>Nuestra misión es proporcionar la mejor preparación técnica, física y mental a nuestros jugadores, creando un ambiente de respeto, disciplina y trabajo en equipo que trasciende el campo de juego.</p>
+                <a href="sobre-nosotros.html" class="about-link">
+                    Ver Más Información <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="stats" id="info">
-        <div class="stats-container">
-            <div class="stat-item reveal">
+    <section class="stats-section" id="info">
+        <div class="stats-grid">
+            <div class="stat-card reveal">
                 <div class="stat-number">5+</div>
                 <div class="stat-label">Años de Historia</div>
             </div>
-            <div class="stat-item reveal">
+            <div class="stat-card reveal">
                 <div class="stat-number">30+</div>
                 <div class="stat-label">Jugadores Formados</div>
             </div>
-            <div class="stat-item reveal">
+            <div class="stat-card reveal">
                 <div class="stat-number">25</div>
                 <div class="stat-label">Campeonatos Ganados</div>
             </div>
-            <div class="stat-item reveal">
+            <div class="stat-card reveal">
                 <div class="stat-number">5</div>
                 <div class="stat-label">Entrenadores Certificados</div>
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contacto">
+<section class="contact-section" id="contacto">
+    <div class="contact-wrapper">
+        <h2 class="section-title reveal">Contáctanos</h2>
+        <p class="section-subtitle reveal">Estamos aquí para responder todas tus preguntas</p>
         <div class="contact-container">
-            <h2 class="reveal">Contáctanos</h2>
-            <p style="color: #666; margin-bottom: 2rem;" class="reveal">Estamos aquí para responder todas tus preguntas</p>
-            <div class="contact-info">
-                <div class="contact-item reveal">
-                    <div class="contact-icon">📧</div>
-                    <strong>Email</strong>
-                    <span>info@clubazul.com</span>
-                </div>
-                <div class="contact-item reveal">
-                    <div class="contact-icon">📱</div>
-                    <strong>Teléfono</strong>
-                    <span>+57 300 123 4567</span>
-                </div>
-                <div class="contact-item reveal">
-                    <div class="contact-icon">📍</div>
-                    <strong>Ubicación</strong>
-                    <span>Bogotá, Colombia</span>
-                </div>
+            <!-- Formulario de Correo -->
+           <div class="contact-form reveal">
+  <form action="https://formspree.io/f/xpwyeydb" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Correo Electrónico" required>
+    <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+
+    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+    <input type="text" name="_honey" style="display:none">
+
+    <button type="submit" class="cta-button">Enviar Mensaje</button>
+  </form>
+</div>
+
+            <!-- WhatsApp Contact -->
+            <div class="contact-whatsapp reveal">
+                <h3>Contáctanos por WhatsApp</h3>
+                <p><strong>Número:</strong> +57 312 5270 787</p>
+                <a href="https://wa.me/3125270787" target="_blank" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> Reserva Ahora
+                </a>
             </div>
         </div>
-    </section>
-
+        <!-- Ubicación con Google Maps -->
+        <div class="contact-location reveal">
+            <h3>Ubicación</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805.6255904779952!2d-73.92305098372564!3d7.480770430342314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e42cb4f6117da21%3A0x63e79941f25267fb!2sMajestic!5e0!3m2!1sen!2sco!4v1761030714997!5m2!1sen!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Club Azul. Todos los derechos reservados.</p>
-        <p style="margin-top: 1rem; opacity: 0.8;">Pasión por el fútbol, compromiso con la excelencia</p>
+        <p>&copy; 2025 Club Majestic. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem;">Futbol y amigos</p>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-  <a href="https://wa.me/573001234567" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
+    <a href="https://wa.me/3125270787" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
         // Scroll Reveal Animation
         function reveal() {
-            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const reveals = document.querySelectorAll('.reveal');
             
             reveals.forEach(element => {
                 const windowHeight = window.innerHeight;
@@ -182,29 +182,52 @@
                 header.classList.remove('scrolled');
             }
         });
+
         // Menu Toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
 
-// Cerrar menu al hacer click en un link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
+        // Cerrar menu al hacer click en un link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Cerrar menu al hacer click fuera
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+        document.addEventListener('scroll', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
+        }
     });
 });
-
-// Cerrar menu al hacer click fuera
-document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-    }
+document.addEventListener('scroll', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
+        }
+    });
 });
     </script>
 </body>
