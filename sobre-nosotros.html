@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Club Deportivo Azul</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #0056d2, #00a8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #0056d2;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, #0056d2, #00a8ff);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            margin-top: 80px;
+            height: 50vh;
+            background: linear-gradient(135deg, #0056d2 0%, #00a8ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -300px;
+            right: -200px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-banner h1 {
+            font-size: 4rem;
+            color: white;
+            text-align: center;
+            z-index: 2;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Historia Section */
+        .historia {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .historia-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #0056d2;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #0056d2, #00a8ff);
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #0056d2, #00a8ff);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 86, 210, 0.2);
+        }
+
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0056d2;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-text {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #0056d2;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        /* Mision Vision Section */
+        .mision-vision {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+        }
+
+        .mision-vision-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .card-mv {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-mv::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #0056d2, #00a8ff);
+        }
+
+        .card-mv:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 86, 210, 0.2);
+        }
+
+        .card-mv-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-mv h3 {
+            font-size: 2rem;
+            color: #0056d2;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-mv p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Valores Section */
+        .valores {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .valores-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .valor-card {
+            background: linear-gradient(135deg, #0056d2, #00a8ff);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .valor-card:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(0, 86, 210, 0.4);
+        }
+
+        .valor-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .valor-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Equipo Section */
+        .equipo {
+            padding: 5rem 5%;
+            background: #f8f9fa;
+        }
+
+        .equipo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .equipo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .miembro-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .miembro-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 86, 210, 0.2);
+        }
+
+        .miembro-foto {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #0056d2;
+        }
+
+        .miembro-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .miembro-info h4 {
+            color: #0056d2;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .miembro-info p {
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #0056d2 0%, #00a8ff 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: white;
+            color: #0056d2;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(360deg);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding-left: 50px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .mision-vision-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">⚽ Club Azul</a>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="index.html#galeria">Galería</a></li>
+                <li><a href="index.html#info">Información</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <h1>Sobre Nosotros</h1>
+    </section>
+
+    <!-- Historia Section -->
+    <section class="historia">
+        <div class="historia-container">
+            <h2 class="section-title reveal">Nuestra Historia</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2005</div>
+                        <p class="timeline-text">Fundación del Club Azul con un grupo de apasionados por el fútbol que soñaban con crear un espacio de formación deportiva de calidad.</p>
+                    </div>
+                    <div></div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <p class="timeline-text">Primer campeonato regional ganado. Comenzamos a expandir nuestras instalaciones y programas de formación juvenil.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <p class="timeline-text">Inauguración de nuestro complejo deportivo con canchas de última generación y áreas de entrenamiento especializadas.</p>
+                    </div>
+                    <div></div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <p class="timeline-text">Alcanzamos los 500 jugadores formados y expandimos nuestros programas a todas las edades.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <p class="timeline-text">20 años de excelencia deportiva. Hoy somos referentes en formación integral de futbolistas.</p>
+                    </div>
+                    <div></div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="mision-vision">
+        <div class="mision-vision-container">
+            <div class="card-mv reveal">
+                <div class="card-mv-icon">🎯</div>
+                <h3>Nuestra Misión</h3>
+                <p>Formar futbolistas integrales con excelencia técnica, táctica y humana, promoviendo valores de disciplina, respeto y trabajo en equipo. Brindamos un espacio donde cada jugador puede desarrollar su máximo potencial deportivo y personal.</p>
+            </div>
+
+            <div class="card-mv reveal">
+                <div class="card-mv-icon">👁️</div>
+                <h3>Nuestra Visión</h3>
+                <p>Ser el club deportivo líder en formación de talentos futbolísticos a nivel nacional, reconocidos por nuestra metodología innovadora, instalaciones de primer nivel y el desarrollo integral de nuestros deportistas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="valores">
+        <div class="valores-container">
+            <h2 class="section-title reveal">Nuestros Valores</h2>
+            <div class="valores-grid">
+                <div class="valor-card reveal">
+                    <div class="valor-icon">💪</div>
+                    <h4>Disciplina</h4>
+                    <p>Compromiso constante con el entrenamiento y la mejora continua</p>
+                </div>
+                <div class="valor-card reveal">
+                    <div class="valor-icon">🤝</div>
+                    <h4>Trabajo en Equipo</h4>
+                    <p>Juntos logramos más que individualmente</p>
+                </div>
+                <div class="valor-card reveal">
+                    <div class="valor-icon">⭐</div>
+                    <h4>Excelencia</h4>
+                    <p>Buscamos siempre dar lo mejor en cada entrenamiento</p>
+                </div>
+                <div class="valor-card reveal">
+                    <div class="valor-icon">❤️</div>
+                    <h4>Pasión</h4>
+                    <p>Amor por el fútbol en cada jugada</p>
+                </div>
+                <div class="valor-card reveal">
+                    <div class="valor-icon">🙏</div>
+                    <h4>Respeto</h4>
+                    <p>Hacia compañeros, rivales y el juego</p>
+                </div>
+                <div class="valor-card reveal">
+                    <div class="valor-icon">🎓</div>
+                    <h4>Formación Integral</h4>
+                    <p>Desarrollo deportivo y personal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Directivo -->
+    <section class="equipo">
+        <div class="equipo-container">
+            <h2 class="section-title reveal">Nuestro Equipo</h2>
+            <div class="equipo-grid">
+                <div class="miembro-card reveal">
+                    <div class="miembro-foto">👤</div>
+                    <div class="miembro-info">
+                        <h4>Director Técnico</h4>
+                        <p>Responsable de la metodología de entrenamiento</p>
+                    </div>
+                </div>
+                <div class="miembro-card reveal">
+                    <div class="miembro-foto">👤</div>
+                    <div class="miembro-info">
+                        <h4>Coordinador Deportivo</h4>
+                        <p>Gestión de equipos y competiciones</p>
+                    </div>
+                </div>
+                <div class="miembro-card reveal">
+                    <div class="miembro-foto">👤</div>
+                    <div class="miembro-info">
+                        <h4>Preparador Físico</h4>
+                        <p>Desarrollo físico y prevención de lesiones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal">
+        <h2>¿Quieres Unirte al Club Azul?</h2>
+        <p>Forma parte de nuestra familia deportiva y alcanza tu máximo potencial</p>
+        <a href="index.html#contacto" class="cta-button">Contáctanos Ahora</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Club Azul. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">Pasión por el fútbol, compromiso con la excelencia</p>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573001234567" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+        💬
+    </a>
+
+    <script>
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>

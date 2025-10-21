@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Club Deportivo Azul</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo"> Club Majestic</div>
+
+              <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#info">Información</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>Bienvenido al Club Majestick</h1>
+                <p>Pasión, Disciplina y Excelencia en el Fútbol</p>
+                <a href="#sobre-nosotros" class="cta-button">Conoce Más</a>
+            </div>
+            <div class="hero-image">
+                <div class="log2">
+                    <img src="/assets/log2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="image-section" id="galeria">
+        <h2 class="section-title reveal">Nuestra Galería</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;" class="reveal">Momentos que definen nuestra historia</p>
+        <div class="image-grid">
+            <div class="image-card reveal">
+                <div class="image-placeholder">⚽</div>
+                <div class="image-card-content">
+                    <h3>Entrenamiento</h3>
+                    <p>Preparación física y técnica de primer nivel</p>
+                </div>
+            </div>
+            <div class="image-card reveal">
+                <div class="image-placeholder">🏆</div>
+                <div class="image-card-content">
+                    <h3>Campeonatos</h3>
+                    <p>Nuestra historia de éxitos y victorias</p>
+                </div>
+            </div>
+            <div class="image-card reveal">
+                <div class="image-placeholder">👥</div>
+                <div class="image-card-content">
+                    <h3>Equipo</h3>
+                    <p>Los mejores jugadores comprometidos con la excelencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre-nosotros">
+        <div class="about-container">
+            <div class="about-image reveal-left">🛡️</div>
+            <div class="about-content reveal-right">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos un club deportivo con más de 5 años de historia, dedicados a formar no solo grandes futbolistas, sino también personas íntegras y comprometidas con los valores del deporte.</p>
+                <p>Nuestra misión es proporcionar la mejor preparación técnica, física y mental a nuestros jugadores, creando un ambiente de respeto, disciplina y trabajo en equipo.</p>
+                <a href="sobre-nosotros.html" class="about-link">Ver Más Información →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="info">
+        <div class="stats-container">
+            <div class="stat-item reveal">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Años de Historia</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Jugadores Formados</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Campeonatos Ganados</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Entrenadores Certificados</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="contact-container">
+            <h2 class="reveal">Contáctanos</h2>
+            <p style="color: #666; margin-bottom: 2rem;" class="reveal">Estamos aquí para responder todas tus preguntas</p>
+            <div class="contact-info">
+                <div class="contact-item reveal">
+                    <div class="contact-icon">📧</div>
+                    <strong>Email</strong>
+                    <span>info@clubazul.com</span>
+                </div>
+                <div class="contact-item reveal">
+                    <div class="contact-icon">📱</div>
+                    <strong>Teléfono</strong>
+                    <span>+57 300 123 4567</span>
+                </div>
+                <div class="contact-item reveal">
+                    <div class="contact-icon">📍</div>
+                    <strong>Ubicación</strong>
+                    <span>Bogotá, Colombia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Club Azul. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">Pasión por el fútbol, compromiso con la excelencia</p>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/573001234567" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+    <script>
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal();
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        // Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Cerrar menu al hacer click en un link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+// Cerrar menu al hacer click fuera
+document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+    </script>
+</body>
+</html>
