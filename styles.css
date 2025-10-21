@@ -877,3 +877,8 @@
                 font-size: 1.6rem;
             }
         }
+
+
+        .gallink{
+            display: flex;
+        }
