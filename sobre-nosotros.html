@@ -129,10 +129,75 @@
             transform: translateY(0);
         }
 
+        /* Intro Section - Nueva */
+        .intro-section {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .intro-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-image {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 86, 210, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .intro-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 86, 210, 0.25);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .intro-text h2 {
+            font-size: 2.8rem;
+            color: #0056d2;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .intro-text h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0056d2, #00a8ff);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .intro-text p {
+            color: #666;
+            line-height: 1.9;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
         /* Historia Section */
         .historia {
             padding: 5rem 5%;
-            background: white;
+            background: #f8f9fa;
         }
 
         .historia-container {
@@ -184,7 +249,7 @@
         }
 
         .timeline-content {
-            background: #f8f9fa;
+            background: white;
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -275,53 +340,10 @@
             line-height: 1.8;
         }
 
-        /* Valores Section */
-        .valores {
-            padding: 5rem 5%;
-            background: white;
-        }
-
-        .valores-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .valores-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .valor-card {
-            background: linear-gradient(135deg, #0056d2, #00a8ff);
-            color: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .valor-card:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 15px 40px rgba(0, 86, 210, 0.4);
-        }
-
-        .valor-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .valor-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
         /* Equipo Section */
         .equipo {
             padding: 5rem 5%;
-            background: #f8f9fa;
+            background: white;
         }
 
         .equipo-container {
@@ -337,7 +359,7 @@
         }
 
         .miembro-card {
-            background: white;
+            background: #f8f9fa;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -483,6 +505,15 @@
                 font-size: 2.5rem;
             }
 
+            .intro-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .intro-text h2 {
+                font-size: 2rem;
+            }
+
             .timeline::before {
                 left: 20px;
             }
@@ -511,7 +542,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="index.html" class="logo">⚽ Club Azul</a>
+            <a href="index.html" class="logo"> Club deportivo Majestic</a>
             <ul class="nav-links">
                 <li><a href="index.html#inicio">Inicio</a></li>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
@@ -525,6 +556,21 @@
     <!-- Hero Banner -->
     <section class="hero-banner">
         <h1>Sobre Nosotros</h1>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <div class="intro-image reveal">
+                <img src="tu-imagen.png" alt="Club Deportivo Azul">
+            </div>
+            <div class="intro-text reveal">
+                <h2>Majestic</h2>
+                <p>Somos un club deportivo dedicado a la formación integral de futbolistas, donde la pasión por el deporte se combina con valores fundamentales y una metodología de entrenamiento de excelencia.</p>
+                <p>Desde nuestra fundación, hemos trabajado incansablemente para crear un espacio donde cada jugador pueda desarrollar su máximo potencial, tanto dentro como fuera de la cancha.</p>
+                <p>Contamos con instalaciones de primer nivel, entrenadores certificados y un ambiente familiar que motiva el crecimiento personal y deportivo de todos nuestros miembros.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Historia Section -->
@@ -593,45 +639,6 @@
                 <div class="card-mv-icon">👁️</div>
                 <h3>Nuestra Visión</h3>
                 <p>Ser el club deportivo líder en formación de talentos futbolísticos a nivel nacional, reconocidos por nuestra metodología innovadora, instalaciones de primer nivel y el desarrollo integral de nuestros deportistas.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Valores -->
-    <section class="valores">
-        <div class="valores-container">
-            <h2 class="section-title reveal">Nuestros Valores</h2>
-            <div class="valores-grid">
-                <div class="valor-card reveal">
-                    <div class="valor-icon">💪</div>
-                    <h4>Disciplina</h4>
-                    <p>Compromiso constante con el entrenamiento y la mejora continua</p>
-                </div>
-                <div class="valor-card reveal">
-                    <div class="valor-icon">🤝</div>
-                    <h4>Trabajo en Equipo</h4>
-                    <p>Juntos logramos más que individualmente</p>
-                </div>
-                <div class="valor-card reveal">
-                    <div class="valor-icon">⭐</div>
-                    <h4>Excelencia</h4>
-                    <p>Buscamos siempre dar lo mejor en cada entrenamiento</p>
-                </div>
-                <div class="valor-card reveal">
-                    <div class="valor-icon">❤️</div>
-                    <h4>Pasión</h4>
-                    <p>Amor por el fútbol en cada jugada</p>
-                </div>
-                <div class="valor-card reveal">
-                    <div class="valor-icon">🙏</div>
-                    <h4>Respeto</h4>
-                    <p>Hacia compañeros, rivales y el juego</p>
-                </div>
-                <div class="valor-card reveal">
-                    <div class="valor-icon">🎓</div>
-                    <h4>Formación Integral</h4>
-                    <p>Desarrollo deportivo y personal</p>
-                </div>
             </div>
         </div>
     </section>

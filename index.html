@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club Deportivo Majestic</title>
     <link rel="icon" type="image/png" href="./assets/log2.png">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -22,7 +22,7 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#info">Información</a></li>
+                <li><a href="#info">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -45,36 +45,50 @@
             </div>
             <div class="hero-image">
                 <div class="log2">
-                    <img src="/assets/log2.png" alt="Club Majestic Logo" onerror="this.style.display='none'">
+                    <img src="./assets/log2.png" alt="Club Majestic Logo">
                 </div>
             </div>
         </div>
     </section>
-<section class="gallery-section" id="galeria">
-    <h2 class="section-title reveal">Nuestra Galería</h2>
-    <div class="gallery-grid">
-        <div class="gallery-card reveal">
-            <img src="./assets/F1.jpg" alt="Imagen 1">
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="galeria">
+        <h2 class="section-title reveal">Nuestra Galería</h2>
+        <div class="gallery-grid">
+            <div class="gallery-card reveal">
+                <img src="./assets/F1.jpg" alt="Imagen 1">
+            </div>
+            <div class="gallery-card reveal">
+                <img src="./assets/jan5.jpg" alt="Imagen 2">
+            </div>
+            <div class="gallery-card reveal">
+                <img src="./assets/jan3.jpg" alt="Imagen 3">
+            </div>
+            <div class="gallery-card reveal">
+                <img src="./assets/jan15.jpg" alt="Imagen 4">
+            </div>
+            <div class="gallery-card reveal">
+                <img src="./assets/f4.jpg" alt="Imagen 5">
+            </div>
+            <div class="gallery-card reveal">
+                <img src="./assets/f5.jpg" alt="Imagen 6">
+            </div>
+            <div class="gallery-card reveal">
+                <img src="./assets/galEVENTOS/ev1.jpg" alt="Imagen 7">
+            </div>
+            <div class="gallery-card reveal">
+                <img src="./assets/galEVENTOS/ev2.png" alt="Imagen 8">
+            </div>
         </div>
-        <div class="gallery-card reveal">
-            <img src="./assets/f.jpg" alt="Imagen 2">
-        </div>
-        <div class="gallery-card reveal">
-            <img src="./assets/f3.jpg" alt="Imagen 3">
-        </div>
-        <div class="gallery-card reveal">
-            <img src="./assets/F2.jpg" alt="Imagen 4">
-        </div>
-        <div class="gallery-card reveal">
-            <img src="./assets/f4.jpg" alt="Imagen 5">
-        </div>
-    </div>
-    <a href="galeria-completa.html" class="about-link">Ver galería completa →</a>
-</section>
+        <a href="galeria-completa.html" class="about-link">Ver galería completa →</a>
+    </section>
+
     <!-- About Section -->
     <section class="about-section" id="sobre-nosotros">
         <div class="about-container">
-            <div class="about-icon"><img src="./assets/log2.png" alt=""></div>
+            <div class="about-icon">
+                <img src="./assets/log2.png" alt="Club Majestic">
+            </div>
             <div class="about-content reveal">
                 <h2>Sobre Nosotros</h2>
                 <p>Somos un club deportivo con más de 5 años de historia, dedicados a formar no solo grandes futbolistas, sino también personas íntegras y comprometidas con los valores del deporte.</p>
@@ -86,70 +100,104 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section" id="info">
-        <div class="stats-grid">
-            <div class="stat-card reveal">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Años de Historia</div>
+    <!-- Servicios Section -->
+    <section class="servicios-section" id="info">
+        <h2 class="section-title reveal">Nuestros Servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card reveal">
+                <div class="servicio-image">
+                    <img src="./assets/jan2.jpg" alt="Eventos Privados">
+                </div>
+                <div class="servicio-content">
+                    <h3>Eventos Privados</h3>
+                    <p>Organiza tu evento con nosotros. Celebraciones, cumpleaños y reuniones especiales en nuestras instalaciones de calidad.</p>
+                    <a href="https://wa.me/3125270787?text=Hola,%20quiero%20información%20sobre%20eventos%20privados" target="_blank" class="servicio-button">
+                        <i class="fab fa-whatsapp"></i> Consultar Eventos
+                    </a>
+                </div>
             </div>
-            <div class="stat-card reveal">
-                <div class="stat-number">30+</div>
-                <div class="stat-label">Jugadores Formados</div>
+            <div class="servicio-card reveal">
+                <div class="servicio-image">
+                    <img src="./assets/torne.jpg" alt="Torneos">
+                </div>
+                <div class="servicio-content">
+                    <h3>Torneos</h3>
+                    <p>Participa en nuestros torneos organizados o crea el tuyo propio. Competencias para todas las edades, sexos y niveles de juego.</p>
+                    <a href="https://wa.me/3125270787?text=Hola,%20quiero%20información%20sobre%20torneos" target="_blank" class="servicio-button">
+                        <i class="fab fa-whatsapp"></i> Información de Torneos
+                    </a>
+                </div>
             </div>
-            <div class="stat-card reveal">
-                <div class="stat-number">25</div>
-                <div class="stat-label">Campeonatos Ganados</div>
-            </div>
-            <div class="stat-card reveal">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Entrenadores Certificados</div>
+            <div class="servicio-card reveal">
+                <div class="servicio-image">
+                    <img src="./assets/alq1.jpg" alt="Alquiler de Canchas">
+                </div>
+                <div class="servicio-content">
+                    <h3>Alquiler de Canchas</h3>
+                    <p>Alquila nuestras canchas por horas. Canchas de fútbol en excelente estado con todas las comodidades para tu juego.</p>
+                    <a href="https://wa.me/3125270787?text=Hola,%20quiero%20alquilar%20una%20cancha" target="_blank" class="servicio-button">
+                        <i class="fab fa-whatsapp"></i> Reservar Cancha
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-<section class="contact-section" id="contacto">
-    <div class="contact-wrapper">
-        <h2 class="section-title reveal">Contáctanos</h2>
-        <p class="section-subtitle reveal">Estamos aquí para responder todas tus preguntas</p>
-        <div class="contact-container">
-            <!-- Formulario de Correo -->
-           <div class="contact-form reveal">
-  <form action="https://formspree.io/f/xpwyeydb" method="POST">
-    <input type="text" name="nombre" placeholder="Nombre" required>
-    <input type="email" name="email" placeholder="Correo Electrónico" required>
-    <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
 
-    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
-    <input type="text" name="_honey" style="display:none">
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-wrapper">
+            <h2 class="section-title reveal">Contáctanos</h2>
+            <p class="section-subtitle reveal">Estamos aquí para responder todas tus preguntas</p>
+            <div class="contact-container">
+                <!-- Formulario de Correo -->
+                <div class="contact-form reveal">
+                    <form action="https://formspree.io/f/xpwyeydb" method="POST">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Correo Electrónico" required>
+                        <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+                        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+                        <input type="text" name="_honey" style="display:none">
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
 
-    <button type="submit" class="cta-button">Enviar Mensaje</button>
-  </form>
-</div>
+                <!-- WhatsApp Contact -->
+                <div class="contact-whatsapp reveal">
+                    <h3>Contáctanos por WhatsApp</h3>
+                    <p><strong>Número:</strong> +57 312 5270 787</p>
+                    <a href="https://wa.me/3125270787" target="_blank" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Reserva Ahora
+                    </a>
+                </div>
+            </div>
 
-            <!-- WhatsApp Contact -->
-            <div class="contact-whatsapp reveal">
-                <h3>Contáctanos por WhatsApp</h3>
-                <p><strong>Número:</strong> +57 312 5270 787</p>
-                <a href="https://wa.me/3125270787" target="_blank" class="whatsapp-button">
-                    <i class="fab fa-whatsapp"></i> Reserva Ahora
+            <!-- Ubicación con Google Maps -->
+            <div class="contact-location reveal">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805.6255904779952!2d-73.92305098372564!3d7.480770430342314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e42cb4f6117da21%3A0x63e79941f25267fb!2sMajestic!5e0!3m2!1sen!2sco!4v1761030714997!5m2!1sen!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Club Majestic. Todos los derechos reservados.</p>
+            <p style="margin-top: 1rem;">Futbol y amigos</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100095159267394" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/cdeportivo_majestic?igsh=MTdxa3hweGJlMXIwOQ==" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
-        <!-- Ubicación con Google Maps -->
-        <div class="contact-location reveal">
-            <h3>Ubicación</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805.6255904779952!2d-73.92305098372564!3d7.480770430342314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e42cb4f6117da21%3A0x63e79941f25267fb!2sMajestic!5e0!3m2!1sen!2sco!4v1761030714997!5m2!1sen!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Club Majestic. Todos los derechos reservados.</p>
-        <p style="margin-top: 1rem;">Futbol y amigos</p>
     </footer>
 
+    <!-- WhatsApp Float Button -->
     <a href="https://wa.me/3125270787" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -207,28 +255,6 @@
                 navLinks.classList.remove('active');
             }
         });
-        document.addEventListener('scroll', () => {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
-        }
-    });
-});
-document.addEventListener('scroll', () => {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
-        }
-    });
-});
     </script>
 </body>
 </html>
