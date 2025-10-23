@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Eventos - Club Majestic</title>
+    <link rel="icon" type="image/png" href="/assets/log2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="eventosStyles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">Club Majestic</a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html#inicio">Inicio</a></li>
+                <li><a href="/index.html#galeria">Galería</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="/index.html#info">Servicios</a></li>
+                <li><a href="/index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <h1><i class="fa-solid fa-trophy"></i> Galería de Eventos</h1>
+        <p>Los mejores momentos de nuestros eventos</p>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-grid" id="gallery">
+            <div class="gallery-item gallery-item-video">
+    <video autoplay muted loop playsinline>
+        <source src="/assets/galEVENTOS/V1.mp4" type="video/mp4">
+    </video>
+</div>
+
+            <div class="gallery-item">
+                <img src="/assets/galEVENTOS/ev1.jpg" alt="evento 2">
+            </div>
+
+            <div class="gallery-item">
+                <img src="/assets/galEVENTOS/ev5.jpg" alt="evento 3">
+            </div>
+
+            <div class="gallery-item">
+                <img src="" alt="evento 4">
+            </div>
+
+            <div class="gallery-item">
+                <img src="/assets/galEVENTOS/ev4.png" alt="evento 5">
+            </div>
+
+            <div class="gallery-item">
+                <img src="/assets/galEVENTOS/ev2.png" alt="evento 6">
+            </div>
+
+            <div class="gallery-item">
+                <img src="/assets/jan2.jpg" alt="evento 7">
+            </div>
+
+            <div class="gallery-item">
+                <img src="" alt="evento 8">
+            </div>
+
+            <div class="gallery-item gallery-item-video">
+    <video autoplay muted loop playsinline>
+        <source src="/assets/galEVENTOS/V2.mp4" type="video/mp4">
+    </video>
+</div>
+
+            <div class="gallery-item">
+                <img src="/assets/jan5.jpg" alt="evento 10">
+            </div>
+
+            <div class="gallery-item">
+                <img src="/assets/galEVENTOS/ev3.png" alt="evento 11">
+            </div>
+
+            <div class="gallery-item">
+                <img src="/assets/jan15.jpg" alt="evento 12">
+            </div>
+
+            <div class="gallery-item">
+                <img src="" alt="evento 13">
+            </div>
+
+            <div class="gallery-item">
+                <img src="" alt="evento 14">
+            </div>
+
+            <div class="gallery-item">
+                <img src="" alt="evento 15">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <img src="" alt="Imagen ampliada" id="lightbox-img">
+            <div class="lightbox-counter" id="lightbox-counter">1 / 15</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Club Majestic. Todos los derechos reservados.</p>
+            <p style="margin-top: 1rem;">Futbol y Amigos</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100095159267394" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/cdeportivo_majestic?igsh=MTdxa3hweGJlMXIwOQ==" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/3125270787" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+// Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+
+// Lightbox Functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+const lightboxCounter = document.getElementById('lightbox-counter');
+const galleryItems = document.querySelectorAll('.gallery-item');
+let currentIndex = 0;
+
+// Función para mostrar contenido en lightbox (VIDEO O IMAGEN)
+function showLightboxContent(index) {
+    const item = galleryItems[index];
+    const video = item.querySelector('video');
+    const img = item.querySelector('img');
+    
+    if (video) {
+        // Si es video
+        const videoSrc = video.querySelector('source').src;
+        lightboxImg.style.display = 'none';
+        
+        let lightboxVideo = document.getElementById('lightbox-video');
+        if (!lightboxVideo) {
+            lightboxVideo = document.createElement('video');
+            lightboxVideo.id = 'lightbox-video';
+            lightboxVideo.controls = true;
+            lightboxVideo.autoplay = true;
+            lightboxVideo.style.width = '100%';
+            lightboxVideo.style.height = '100%';
+            lightboxVideo.style.maxHeight = '85vh';
+            lightboxVideo.style.objectFit = 'contain';
+            lightboxVideo.style.borderRadius = '10px';
+            lightboxVideo.style.position = 'relative';
+            lightboxVideo.style.zIndex = '1';
+            lightboxVideo.style.pointerEvents = 'none'; // El video no bloquea las flechas
+            document.querySelector('.lightbox-content').appendChild(lightboxVideo);
+        }
+        
+        lightboxVideo.innerHTML = `<source src="${videoSrc}" type="video/mp4">`;
+        lightboxVideo.load();
+        lightboxVideo.style.display = 'block';
+    } else if (img) {
+        // Si es imagen
+        const imgSrc = img.src;
+        lightboxImg.src = imgSrc;
+        lightboxImg.style.display = 'block';
+        
+        const lightboxVideo = document.getElementById('lightbox-video');
+        if (lightboxVideo) {
+            lightboxVideo.style.display = 'none';
+            lightboxVideo.pause();
+        }
+    }
+}
+
+// Open lightbox al hacer click en cualquier item
+galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        currentIndex = index;
+        showLightboxContent(currentIndex);
+        updateCounter();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Close lightbox
+lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    
+    // Pausar video si existe
+    const lightboxVideo = document.getElementById('lightbox-video');
+    if (lightboxVideo) {
+        lightboxVideo.pause();
+    }
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        
+        // Pausar video si existe
+        const lightboxVideo = document.getElementById('lightbox-video');
+        if (lightboxVideo) {
+            lightboxVideo.pause();
+        }
+    }
+});
+
+// Navigate lightbox - VERSIÓN CORREGIDA
+lightboxPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault(); // Prevenir comportamiento por defecto
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    showLightboxContent(currentIndex);
+    updateCounter();
+});
+
+lightboxNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault(); // Prevenir comportamiento por defecto
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    showLightboxContent(currentIndex);
+    updateCounter();
+});
+
+// Update counter
+function updateCounter() {
+    lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Pausar video si existe
+            const lightboxVideo = document.getElementById('lightbox-video');
+            if (lightboxVideo) {
+                lightboxVideo.pause();
+            }
+        } else if (e.key === 'ArrowLeft') {
+            lightboxPrev.click();
+        } else if (e.key === 'ArrowRight') {
+            lightboxNext.click();
+        }
+    }
+});
+    </script>
+</body>
+</html>
