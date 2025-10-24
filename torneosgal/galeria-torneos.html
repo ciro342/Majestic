@@ -21,7 +21,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="/index.html#inicio">Inicio</a></li>
                 <li><a href="/index.html#galeria">Galería</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="/nosotros/sobre-nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="/index.html#info">Servicios</a></li>
                 <li><a href="/index.html#contacto">Contacto</a></li>
             </ul>
@@ -29,10 +29,67 @@
     </header>
 
     <section class="hero-banner">
+    <div class="hero-content">
         <h1><i class="fa-solid fa-trophy"></i> Galería de Torneos</h1>
-        <p>Los mejores momentos de nuestras competencias</p>
-    </section>
+        <p class="hero-subtitle">Los mejores momentos de nuestras competencias</p>
+        
+        <div class="hero-services">
+            <div class="hero-service-card">
+                <div class="service-icon-wrapper">
+                    <i class="fa-solid fa-futbol"></i>
+                </div>
+                <h3>Torneos Profesionales</h3>
+                <p>Organizamos competencias con sistemas de eliminación, grupos y brackets personalizados</p>
+            </div>
 
+            <div class="hero-service-card">
+                <div class="service-icon-wrapper">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <h3>Reserva de Canchas</h3>
+                <p>Canchas sintéticas de última generación disponibles 7 días a la semana</p>
+            </div>
+
+            <div class="hero-service-card">
+                <div class="service-icon-wrapper">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>Arbitraje </h3>
+                <p>Árbitros profesionales que garantizan partidos justos y organizados</p>
+            </div>
+
+            <div class="hero-service-card">
+                <div class="service-icon-wrapper">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                <h3>Cobertura Audiovisual</h3>
+                <p>Fotografía y video  para inmortalizar tus mejores jugadas</p>
+            </div>
+
+            <div class="hero-service-card">
+                <div class="service-icon-wrapper">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <h3>Premiación</h3>
+                <p>Trofeos, medallas y certificados para reconocer a los campeones</p>
+            </div>
+
+            <div class="hero-service-card">
+                <div class="service-icon-wrapper">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+                <h3>Equipamiento</h3>
+                <p>Alquiler de uniformes, balones y todo lo necesario para tu equipo</p>
+            </div>
+        </div>
+
+        <a href="https://wa.me/573106943727" class="hero-cta-button">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Solicitar Información</span>
+        </a>
+    </div>
+</section>
+    
     <section class="gallery-section">
         <div class="gallery-grid" id="gallery">
             <!-- Las imágenes tendrán diferentes tamaños según el CSS -->
@@ -134,6 +191,11 @@
     <div class="gallery-item">
                 <img src="/assets/galTORNEOS/f18.jpg" alt="Torneo 20">
             </div>
+                <div class="gallery-item gallery-item-video">
+    <video autoplay muted loop playsinline>
+        <source src="/assets/galTORNEOS/video6.mp4" type="video/mp4">
+    </video>
+</div>
         </div>
     </section>
 
@@ -153,7 +215,12 @@
             <div class="lightbox-counter" id="lightbox-counter">1 / 15</div>
         </div>
     </div>
+    <div class="gallink">
 
+    <a href="/eventosgal/galeria-eventos.html" class="about-link">
+    <i class="fa-solid fa-camera"></i> Ver galería de Eventos →
+    </a>
+</div>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -170,8 +237,10 @@
         </div>
     </footer>
 
+    
+
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/3125270787" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+    <a href="https://wa.me/573106943727" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
