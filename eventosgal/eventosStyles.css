@@ -932,3 +932,66 @@
             box-shadow: none;
             transform: none;
         }
+
+        /* Nueva sección de servicios de eventos */
+.services-section-eventos {
+    padding: 5rem 5%;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.services-container-eventos {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title-eventos {
+    font-size: 2.5rem;
+    color: #0056d2;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 800;
+}
+
+/* Hero banner simplificado */
+.hero-banner {
+    margin-top: 80px;
+    min-height: 50vh;
+    padding: 4rem 5%;
+}
+
+.hero-subtitle {
+    margin-bottom: 0; /* Quitamos margen porque ya no hay tarjetas abajo */
+}
+
+/* Responsive para la nueva sección */
+@media (max-width: 1024px) {
+    .hero-services-eventos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section-eventos {
+        padding: 3rem 5%;
+    }
+
+    .section-title-eventos {
+        font-size: 2rem;
+    }
+
+    .hero-banner {
+        min-height: 35vh;
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section-eventos {
+        padding: 2rem 4%;
+    }
+
+    .section-title-eventos {
+        font-size: 1.7rem;
+    }
+}
