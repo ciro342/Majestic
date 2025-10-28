@@ -278,17 +278,28 @@
 .hero-cta-button:hover i {
     transform: scale(1.2) rotate(15deg);
 }
-
+/* 
 @media (max-width: 1024px) {
     .hero-services {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
-}
+} */
 
 @media (max-width: 768px) {
+      .services-section {
+        padding: 3rem 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+   
+
     .hero-banner {
         padding: 3rem 5%;
+         min-height: auto;
     }
 
     .hero-banner h1 {
@@ -318,17 +329,31 @@
         font-size: 1.7rem;
     }
 
-    .hero-service-card h3 {
-        font-size: 1.2rem;
-    }
+  
 
     .hero-cta-button {
         padding: 1rem 2rem;
+         width: 100%;
         font-size: 1.1rem;
     }
 }
 
+
 @media (max-width: 480px) {
+    .services-section {
+        padding: 2rem 4%;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+     .hero-banner {
+        padding: 2rem 3%; /* Menos padding lateral */
+    }
     .hero-banner h1 {
         font-size: 2rem;
     }
@@ -925,3 +950,39 @@ grid-column: span 1;
 
 
         
+
+        /* Nueva sección de servicios */
+.services-section {
+    padding: 5rem 5%;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #0056d2;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 800;
+}
+
+/* Hero banner simplificado */
+.hero-banner {
+    margin-top: 80px;
+    min-height: 50vh;
+    background: linear-gradient(135deg, #0056d2 0%, #00a8ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 5%;
+}
+
+.hero-banner .hero-services {
+    display: none; /* Ocultamos las tarjetas del hero */
+}
